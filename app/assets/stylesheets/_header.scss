@@ -1,0 +1,110 @@
+@mixin top-btn {
+  text-align: center;
+  text-decoration: none;
+  color: #dfe6e9;
+  background: linear-gradient(to right,#57008b, #ed1bee, #ff0083);
+  font-size: 20px;
+  border-radius: 50px;
+}
+
+.wrapper {
+  height: 100%;
+  width: 100%;
+
+  footer {
+    width: 1800px;
+    margin: 0 auto;
+    padding-top: 10px;
+    background-color: rgba(201, 186, 186, 0.562);
+
+    
+    .footer-top {
+      height: 50px;
+      display: flex;
+
+      .company-name {
+        box-sizing: border-box;
+        margin-right: 10%;
+        margin-left: 50px;
+        padding: 0 15px;
+        height: 100%;
+        width: auto;
+        line-height: 50px;
+        color: #dfe6e9;
+        background: linear-gradient(to right,#57008b, #ed1bee, #ff0083);
+        font-size: 22px;
+        font-weight: bold;
+        border-radius: 0 50px 0 50px;
+        
+      }
+      .search-box {
+        height: 100%;
+        width: 1000px;
+        display: flex;
+        
+        #sbox {
+          box-sizing: border-box;
+          height: 100%;
+          width: 100%;
+          outline: none;
+          padding: 0 15px;
+          border: none;
+          border-radius: 50px 0 0 50px;
+          background-color: #eee;
+
+        }
+
+        #sbtn {
+          box-sizing: border-box;
+          height: 50px;
+          width: 70px;
+          outline: none;
+          border: none;
+          border-radius:0 50px 50px 0;
+          background: linear-gradient(to right,#57008b, #ed1bee, #ff0083);
+          // background-color: #7fbfff;
+          color: #fff;
+          cursor: pointer;
+        }
+
+        #sbtn:hover {
+          color: #666;
+        }
+      }
+    }
+
+    .footer-bottom {
+      height: 50px;
+      
+      .footer-option {
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 20%;
+        align-items: center;
+        height: 100%;
+        font-size: 18px;
+
+        .share {
+          width: 100px;
+          @include top-btn;
+        }
+
+        .category {
+          width: 130px;
+          @include top-btn;
+        }
+
+        .user {
+          width: 100px;
+          @include top-btn;
+        }
+
+        .account {
+          width: 120px;
+          @include top-btn;
+        }
+      }
+    }
+  }
+}
