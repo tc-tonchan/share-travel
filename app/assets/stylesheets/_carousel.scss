@@ -1,0 +1,95 @@
+@mixin backgrond-picture {
+  // background-image: url($background-image);
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+@mixin owl-nav-btn {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  outline: none;
+  -webkit-transform: translateY(-23px);
+  transform: translateY(-23px);
+  i {
+    color: #ccc;
+  }
+}
+
+.owl-carousel {
+  height: 600px;
+  overflow: hidden;
+  position: absolute;
+
+  &__link {
+    display: block;
+    &--sea {
+      @include backgrond-picture;
+      background-image: url(sea.jpg);
+    }
+
+    &--forest {
+      @include backgrond-picture;
+      background-image: url(forest.jpg);
+    }
+
+    &--electric_light {
+      @include backgrond-picture;
+      background-image: url(ladder.jpg);
+    }
+  }
+
+  // & .owl-prev {
+  //   @include owl-nav-btn;
+  //   left: 60px;
+  // }
+
+  // & .owl-next {
+  //   @include owl-nav-btn;
+  //   right: 60px;
+  // }
+
+  & .owl-dots {
+    margin: -30px;
+    text-align: center;
+  }
+
+  & .owl-dot {
+    position: relative;
+    background: white !important;
+    opacity: 0.4;
+    border-radius: 50%;
+    height: 12px;
+    width: 12px;
+    min-height: 12px;
+    margin-right: 15px;
+    outline: none;
+    &.active {
+      opacity: 1;
+      background: rgba(0,0,0,0.5) !important;
+    }
+  }
+
+  & .owl-stage-outer, .owl-stage, .owl-item, .owl-item>a {
+    height: 100%;
+  }
+}
+
+@media screen and (min-width: 1068px) {
+  .owl-carousel {
+    height: 600px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1068px) {
+  .owl-carousel {
+    height: 600px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .slide-banner .owl-dots {
+    display: none;
+  }
+}
