@@ -10,7 +10,6 @@
 .wrapper {
   height: 100%;
   width: 100%;
-  background-color: rgba(201, 186, 186, 0.562);
 
 
   footer {
@@ -51,8 +50,12 @@
           padding: 0 15px;
           border: none;
           border-radius: 50px 0 0 50px;
-          background-color: #eee;
+          // background-color: rgba(201, 186, 186, 0.562);
+          background-color: #FF5CA7;
+        }
 
+        ::placeholder {
+          color: #dfe6e9;
         }
 
         #sbtn {
@@ -64,7 +67,7 @@
           border-radius:0 50px 50px 0;
           background: linear-gradient(to right,#57008b, #ed1bee, #ff0083);
           // background-color: #7fbfff;
-          color: #fff;
+          color: #dfe6e9;
           cursor: pointer;
         }
 
