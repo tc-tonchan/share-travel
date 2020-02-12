@@ -16,9 +16,11 @@
  *= require owl.theme
  */
  @import "./reset";
- @import "./header";
+ @import "./mixin";
  @import "font-awesome-sprockets";
  @import "font-awesome";
+ @import "./header";
  @import "./carousel";
  @import "owl.carousel";
  @import "owl.theme.default";
+ @import "./main";
